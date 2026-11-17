@@ -1,16 +1,14 @@
 # PS3 FTP Transfer Guide
 
-\<p align="center">   \<strong>Transfer Large Files from Windows to PlayStation 3 Using FTP\</strong> \</p>
+**Transfer Large Files from Windows to PlayStation 3 Using FTP**
 
-\<p align="center">   A practical, step-by-step guide to transferring large files to a PlayStation 3 using multiMAN, FileZilla, and a direct Ethernet connection. \</p>
+A practical, step-by-step guide to transferring large files to a PlayStation 3 using multiMAN, FileZilla, and a direct Ethernet connection.
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Platform-PlayStation%203-blue?style=flat-square](https://img.shields.io/badge/Platform-PlayStation%203-blue?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/OS-Windows%2011-blue?style=flat-square](https://img.shields.io/badge/OS-Windows%2011-blue?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/Transfer-FTP-green?style=flat-square](https://img.shields.io/badge/Transfer-FTP-green?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/Connection-Ethernet-orange?style=flat-square](https://img.shields.io/badge/Connection-Ethernet-orange?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/Documentation-Guide-informational?style=flat-square](https://img.shields.io/badge/Documentation-Guide-informational?style=flat-square)" />
-\</p>
+![Platform](https://img.shields.io/badge/Platform-PlayStation%203-blue?style=flat-square)
+![OS](https://img.shields.io/badge/OS-Windows%2011-blue?style=flat-square)
+![Transfer](https://img.shields.io/badge/Transfer-FTP-green?style=flat-square)
+![Connection](https://img.shields.io/badge/Connection-Ethernet-orange?style=flat-square)
+![Documentation](https://img.shields.io/badge/Documentation-Guide-informational?style=flat-square)
 
 ---
 
@@ -575,8 +573,8 @@ See the repository's license information for applicable terms.
 
 ---
 
-\<p align="center">
-&#x20; \<strong>Documented from a real-world PS3 FTP transfer experiment.\</strong>
-&#x20; \<br />
-&#x20; Made for learning, sharing, and improving technical knowledge.
-\</p>
+---
+
+**Documented from a real-world PS3 FTP transfer experiment.**
+
+Made for learning, sharing, and improving technical knowledge.
