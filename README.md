@@ -55,10 +55,10 @@ The main goal is to provide a practical and understandable guide for transferrin
 FAT32 is widely compatible with the PlayStation 3, but it has a limitation that makes transferring large files difficult.
 
 | File System | Maximum Individual File Size |
-| ----------- | ---------------------------: |
-| FAT32       |          Approximately 4 GiB |
-| NTFS        |   Supports much larger files |
-| exFAT       |   Supports much larger files |
+|---|---:|
+| FAT32 | Approximately 4 GiB |
+| NTFS | Supports much larger files |
+| exFAT | Supports much larger files |
 
 FTP provides another way to transfer files directly to the PS3's internal storage.
 
@@ -86,24 +86,24 @@ Before starting, prepare the following equipment and software.
 
 ### Hardware
 
-| Component               | Description                                       |
-| ----------------------- | ------------------------------------------------- |
-| PlayStation 3           | Console running compatible CFW                    |
-| Windows PC/Laptop       | Used to manage and transfer files                 |
-| Ethernet Cable          | Connects the PC directly to the PS3               |
+| Component | Description |
+|---|---|
+| PlayStation 3 | Console running compatible CFW |
+| Windows PC/Laptop | Used to manage and transfer files |
+| Ethernet Cable | Connects the PC directly to the PS3 |
 | USB-to-Ethernet Adapter | Required if the PC does not have an Ethernet port |
 
 ### Software
 
-| Software           | Purpose                                      |
-| ------------------ | -------------------------------------------- |
-| multiMAN           | Provides FTP server functionality on the PS3 |
-| FileZilla Client   | Connects to the PS3 FTP server               |
-| Windows PowerShell | Tests network connectivity                   |
+| Software | Purpose |
+|---|---|
+| multiMAN | Provides FTP server functionality on the PS3 |
+| FileZilla Client | Connects to the PS3 FTP server |
+| Windows PowerShell | Tests network connectivity |
 
 **Download FileZilla Client:**
 
-[https://filezilla-project.org/download.php?type=client](https://filezilla-project.org/download.php?type=client)
+[Download FileZilla Client](https://filezilla-project.org/download.php?type=client)
 
 Make sure to download FileZilla Client, not FileZilla Server.
 
@@ -144,9 +144,9 @@ The direct Ethernet connection does not require the PC and PS3 to connect throug
 
 Use a separate private network for the direct Ethernet connection.
 
-| Device        | IP Address     | Subnet Mask     |
-| ------------- | -------------- | --------------- |
-| Windows PC    | `192.168.50.1` | `255.255.255.0` |
+| Device | IP Address | Subnet Mask |
+|---|---|---|
+| Windows PC | `192.168.50.1` | `255.255.255.0` |
 | PlayStation 3 | `192.168.50.2` | `255.255.255.0` |
 
 The gateway and DNS are not required for basic FTP communication over this isolated direct connection.
@@ -177,7 +177,7 @@ Configure the Ethernet adapter with a static IP address.
 ### Open Network Connections
 
 1. Press `Win + R`.
-2. Type:
+2. Type the following command:
 
 ```text
 ncpa.cpl
@@ -185,23 +185,23 @@ ncpa.cpl
 
 3. Press Enter.
 4. Find the Ethernet adapter connected to the PS3.
-5. Right-click the adapter and select Properties.
-6. Select Internet Protocol Version 4 (TCP/IPv4).
-7. Click Properties.
+5. Right-click the adapter and select **Properties**.
+6. Select **Internet Protocol Version 4 (TCP/IPv4)**.
+7. Click **Properties**.
 
 ### Configure IPv4
 
 Select **Use the following IP address** and enter:
 
-| Setting         | Value           |
-| --------------- | --------------- |
-| IP Address      | `192.168.50.1`  |
-| Subnet Mask     | `255.255.255.0` |
-| Default Gateway | Leave blank     |
-| Preferred DNS   | Leave blank     |
-| Alternate DNS   | Leave blank     |
+| Setting | Value |
+|---|---|
+| IP Address | `192.168.50.1` |
+| Subnet Mask | `255.255.255.0` |
+| Default Gateway | Leave blank |
+| Preferred DNS | Leave blank |
+| Alternate DNS | Leave blank |
 
-Click OK and close the network settings.
+Click **OK** and close the network settings.
 
 **Important:** Configure the Ethernet adapter only. Do not change the Wi-Fi adapter settings if you want to keep your internet connection active.
 
@@ -221,28 +221,28 @@ Settings
 
 Choose the following configuration:
 
-1. Select Custom.
-2. Select Wired Connection.
-3. Choose Auto-Detect for Operation Mode.
-4. Select Manual for IP Address Setting.
+1. Select **Custom**.
+2. Select **Wired Connection**.
+3. Choose **Auto-Detect** for Operation Mode.
+4. Select **Manual** for IP Address Setting.
 
 Enter the following values:
 
-| Setting        | Value                    |
-| -------------- | ------------------------ |
-| IP Address     | `192.168.50.2`           |
-| Subnet Mask    | `255.255.255.0`          |
-| Default Router | Leave blank or `0.0.0.0` |
-| Primary DNS    | Leave blank or `0.0.0.0` |
-| Secondary DNS  | Leave blank or `0.0.0.0` |
+| Setting | Value |
+|---|---|
+| IP Address | `192.168.50.2` |
+| Subnet Mask | `255.255.255.0` |
+| Default Router | Leave blank or `0.0.0.0` if accepted |
+| Primary DNS | Leave blank or `0.0.0.0` if accepted |
+| Secondary DNS | Leave blank or `0.0.0.0` if accepted |
 
 Continue with:
 
-| Setting      | Value      |
-| ------------ | ---------- |
-| MTU          | Automatic  |
+| Setting | Value |
+|---|---|
+| MTU | Automatic |
 | Proxy Server | Do Not Use |
-| UPnP         | Enable     |
+| UPnP | Enable |
 
 Complete the configuration.
 
@@ -306,21 +306,21 @@ Open FileZilla Client on Windows.
 
 Create a new connection:
 
-1. Open File.
-2. Select Site Manager.
-3. Click New Site.
+1. Open **File**.
+2. Select **Site Manager**.
+3. Click **New Site**.
 4. Give the connection a name, such as `PS3 FTP`.
 
 Configure the connection as follows:
 
-| Setting       | Value                        |
-| ------------- | ---------------------------- |
-| Protocol      | FTP - File Transfer Protocol |
-| Host          | `192.168.50.2`               |
-| Port          | `21`                         |
-| Encryption    | Only use plain FTP           |
-| Logon Type    | Anonymous                    |
-| Transfer Mode | Passive                      |
+| Setting | Value |
+|---|---|
+| Protocol | FTP - File Transfer Protocol |
+| Host | `192.168.50.2` |
+| Port | `21` |
+| Encryption | Only use plain FTP |
+| Logon Type | Anonymous |
+| Transfer Mode | Passive |
 
 Save the configuration.
 
@@ -336,11 +336,7 @@ Invalid character sequence received.
 
 Try changing the character encoding through:
 
-```text
-Site Manager
-  └── Charset
-       └── Use custom charset
-```
+**Site Manager → Charset → Use custom charset**
 
 Select a compatible encoding and reconnect.
 
@@ -348,17 +344,17 @@ Select a compatible encoding and reconnect.
 
 ## Step 6 - Connect to the PS3
 
-Click Connect in FileZilla.
+Click **Connect** in FileZilla.
 
 If the connection succeeds, the remote directory panel should display the PS3 filesystem.
 
 Some commonly visible directories include:
 
-| Directory            | Description                    |
-| -------------------- | ------------------------------ |
-| `/dev_hdd0`          | Internal PS3 storage           |
-| `/dev_usb001`        | USB storage device             |
-| `/dev_flash`         | System firmware storage        |
+| Directory | Description |
+|---|---|
+| `/dev_hdd0` | Internal PS3 storage |
+| `/dev_usb001` | USB storage device |
+| `/dev_flash` | System firmware storage |
 | `/dev_hdd0/packages` | Common directory for PKG files |
 
 For this guide, the primary storage location is:
@@ -388,8 +384,8 @@ Once the directory listing is successful, FileZilla is ready to access the PS3 s
 
 Once FileZilla is connected:
 
-1. Locate the file on the left panel (Local Site).
-2. Navigate to `/dev_hdd0/packages/` on the right panel (Remote Site).
+1. Locate the file on the left panel (**Local Site**).
+2. Navigate to `/dev_hdd0/packages/` on the right panel (**Remote Site**).
 3. Select the file you want to transfer.
 4. Drag and drop it into the remote directory.
 5. Wait until the transfer reaches 100%.
@@ -419,9 +415,9 @@ The same general FTP workflow was tested using two different network configurati
 ### Observed Results
 
 | Connection Type | Transfer Speed |
-| --------------- | -------------: |
-| Wi-Fi           |      408 KiB/s |
-| Direct Ethernet |     10.9 MiB/s |
+|---|---:|
+| Wi-Fi | 408 KiB/s |
+| Direct Ethernet | 10.9 MiB/s |
 
 ### Performance Improvement
 
@@ -570,8 +566,6 @@ The author is not responsible for data loss, hardware damage, or other issues re
 This project is intended to be released under the **MIT License**.
 
 See the repository's license information for applicable terms.
-
----
 
 ---
 
